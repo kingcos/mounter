@@ -55,9 +55,9 @@ typedef NS_ENUM(NSUInteger, DiskPartitionType) {
 + (DiskModel *)diskModelByID:(nonnull NSString *)id;
 
 /// 装载磁盘分区
-+ (void)mountByID:(NSString *)id completion:(void(^)(NSError * _Nullable error))completion;
++ (void)mountByID:(NSString *)id completion:(nullable void(^)(NSError * _Nullable error))completion;
 /// 推出磁盘分区
-+ (void)unmountByID:(NSString *)id completion:(void(^)(NSError * _Nullable error))completion;
++ (void)unmountByID:(NSString *)id completion:(nullable void(^)(NSError * _Nullable error))completion;
 
 @end
 
